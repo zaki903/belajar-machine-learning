@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediksi Stres</title>
+</head>
+<body>
+    <h1>Form Analisis Stres</h1>
+    <form method="POST" action="/predict">
+        <textarea name="text" rows="5" cols="60" placeholder="Masukkan teks di sini..."></textarea><br><br>
+        <button type="submit">Prediksi</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Hasil Prediksi: {{ prediction }}</h2>
+        <p>Skor Model: {{ score }}</p>
+        <p>Teks Input: "{{ input_text }}"</p>
+    {% endif %}
+</body>
+</html>
